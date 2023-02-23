@@ -1,9 +1,14 @@
 import Counter from "./Counter";
+import { CounterProvider } from "./context/CounterContext";
+import { initState } from "./context/CounterContext";
+
 const App = () => {
   return (
-    <div>
-      <Counter>{(num: number) => <>Current count: {num}</>}</Counter>
-    </div>
+    <>
+      <CounterProvider count={initState.count} text={initState.text}>
+        <Counter>{(num: number) => <>Current count: {num}</>}</Counter>
+      </CounterProvider>
+    </>
   );
 };
 
