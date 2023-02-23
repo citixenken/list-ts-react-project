@@ -1,15 +1,7 @@
-import Counter from "./Counter";
-import { CounterProvider } from "./context/CounterContext";
-import { initState } from "./context/CounterContext";
+import React from "react";
 
 const App = () => {
-  return (
-    <>
-      <CounterProvider count={initState.count} text={initState.text}>
-        <Counter>{(num: number) => <>Current count: {num}</>}</Counter>
-      </CounterProvider>
-    </>
-  );
+  return <div>App</div>;
 };
 
 export default App;
